@@ -1,6 +1,6 @@
 # Risk Register (by Frontline)
 
-Turn the risk spreadsheet nobody opens into a scored, regulator-aligned risk register your board trusts, in minutes. Works in Claude Cowork, Claude Code and the Claude apps.
+Turn your risk spreadsheet into a scored, regulator-aligned risk register your board trusts, in minutes. Works in Claude Cowork, Claude Code and the Claude apps.
 
 ## What it does
 
