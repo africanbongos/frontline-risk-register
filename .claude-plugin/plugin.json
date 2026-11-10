@@ -1,7 +1,7 @@
 {
   "name": "frontline-risk-register",
   "displayName": "Risk Register",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Turn a messy risk spreadsheet, or nothing at all, into a scored, regulator-aligned risk register: 5x5 matrix, hierarchy of controls, critical controls, owners, review dates, a control gap check and a board-ready heatmap.",
   "author": { "name": "Frontline", "url": "https://getfrontline.io" },
   "homepage": "https://getfrontline.io",
