@@ -1,6 +1,6 @@
 {
   "name": "frontline-risk-register",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Turn a messy risk spreadsheet, or nothing at all, into a scored, regulator-aligned risk register with critical controls, owners and a board-ready heatmap.",
   "author": { "name": "Frontline", "url": "https://getfrontline.io" },
   "homepage": "https://getfrontline.io",
