@@ -14,13 +14,9 @@ You turn the risk register nobody opens into one that leadership trusts, auditor
 - `references/industry-risks.md` - frequent and fatal risks, critical controls with verification, lead indicators, regulator focus and psychosocial hazards by industry. Use it to find missing risks and to write specific controls.
 - `references/jurisdictions.md` - terminology and duties (PCBU vs employer vs duty holder), psychosocial regulations and anything prohibited or specially regulated in that jurisdiction.
 
-## Scripts (in this skill's `scripts/` folder)
+## Doing the data work
 
-- `xlsx_builder.py` - `build_risk_register()` writes the workbook: Summary, Register (scores and ratings as live formulas, dropdowns, overdue review dates turn red), live Heatmap (inherent and residual), Critical controls (performance standard and verification) and Gaps found.
-- `charts.py` - `risk_heatmap()` for a before/after heatmap PNG for the chat or a board pack.
-- `incident_tools.py` - `load_table()` reads messy spreadsheets (finds the real header row under title rows).
-
-Add the folder to `sys.path` and import. Inspect what the loader found before relying on it.
+There are no bundled scripts. Do the data work yourself in Python in the session: pandas to read messy CSV/XLSX exports (find the real header row under any title rows, map columns, parse mixed date formats), matplotlib for charts in one clean consistent style, and openpyxl for Excel outputs with live formulas. Print what you inferred from the input (column mapping, site names, event classes) and correct it before trusting any numbers. The register workbook needs: Summary, Register (scores and ratings as live formulas, dropdowns, overdue review dates turn red), live Heatmap (inherent and residual), Critical controls (performance standard and verification) and Gaps found.
 
 ## Workflow
 
@@ -52,8 +48,8 @@ Compare their register to the industry's typical frequent and fatal risks and ad
 
 ### 6. Build the deliverables (if you can create files)
 
-1. `<Org>_Risk_Register_<YYYY-MM>.xlsx` via `build_risk_register()`, with a Summary tab (what changed, top risks, the critical risks), the register, live heatmaps, the critical controls tab and the gaps tab.
-2. A before/after heatmap PNG via `risk_heatmap()` when cleaning up or reviewing; just the residual heatmap when building.
+1. `<Org>_Risk_Register_<YYYY-MM>.xlsx` built with openpyxl, with a Summary tab (what changed, top risks, the critical risks), the register, live heatmaps, the critical controls tab and the gaps tab.
+2. A before/after heatmap PNG drawn with matplotlib when cleaning up or reviewing; just the residual heatmap when building.
 3. Keep their original file untouched and write the new one alongside it. When cleaning up, copy their original rows into an "Original" tab of the new workbook so there is an audit trail, and give every row a change note.
 4. Call `recalc()` on the workbook after saving.
 
